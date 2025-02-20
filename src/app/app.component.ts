@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
+    <div class="flex flex-col min-h-screen">
+      <app-header></app-header>
+      <main class="">
+        <router-outlet />
+      </main>
+    </div>
   `,
   styles: [],
 })
-export class AppComponent {
-  title = 'signal-store';
-}
+export class AppComponent {}
