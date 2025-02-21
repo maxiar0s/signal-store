@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent],
   template: `
-    <div class="flex flex-col min-h-screen">
+    <div class="grid min-h-screen">
       <app-header></app-header>
       <main class="">
         <router-outlet />
